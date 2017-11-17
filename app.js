@@ -10,21 +10,23 @@ app.set("view engine", "ejs");
 
 var campgroundSchema = new mongoose.Schema({
     name: String, 
-    image: String
+    image: String,
+    description: String
 });
 
 var Campground = mongoose.model("Campground", campgroundSchema);
 
-// Campground.create({name: "Unicoi", 
-//                   image: "https://static.pexels.com/photos/176381/pexels-photo-176381.jpeg"
-// }, function(err, campground) {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log("New campground");
-//         console.log(campground);
-//     }
-// });
+Campground.create({name: "Unicoi State Park", 
+                  image: "https://static.pexels.com/photos/176381/pexels-photo-176381.jpeg",
+                  description: "Restrooms are clean but the showers are super small."
+}, function(err, campground) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("New campground");
+        console.log(campground);
+    }
+});
 
 app.get("/", function(req, res) {
     res.render("landing");
@@ -56,6 +58,10 @@ app.post("/campgrounds", function(req, res) {
 
 app.get("/campgrounds/new", function(req, res) {
    res.render("new"); 
+});
+
+app.get("/campgrounds/:id", function(req, res) {
+    res.send("This will be the show page!");
 });
 
 
