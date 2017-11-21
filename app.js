@@ -2,19 +2,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 var mongoose = require("mongoose");
+var Campground = require("./models/campground")
 mongoose.Promise = global.Promise;
 
 mongoose.connect("mongodb://localhost/happy-camper", { useMongoClient: true });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
-var campgroundSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    description: String
-});
-
-var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create({name: "Unicoi State Park", 
 //                   image: "https://static.pexels.com/photos/176381/pexels-photo-176381.jpeg",
