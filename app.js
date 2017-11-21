@@ -2,9 +2,11 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 var mongoose = require("mongoose");
-var Campground = require("./models/campground")
+var Campground = require("./models/campground");
+var seedDB = require("./seeds");
 mongoose.Promise = global.Promise;
 
+seedDB();
 mongoose.connect("mongodb://localhost/happy-camper", { useMongoClient: true });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
