@@ -6,23 +6,12 @@ var Campground = require("./models/campground");
 var seedDB = require("./seeds");
 mongoose.Promise = global.Promise;
 
-seedDB();
+
 mongoose.connect("mongodb://localhost/happy-camper", { useMongoClient: true });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+seedDB();
 
-
-// Campground.create({name: "Unicoi State Park", 
-//                   image: "https://static.pexels.com/photos/176381/pexels-photo-176381.jpeg",
-//                   description: "Restrooms are clean but the showers are super small."
-// }, function(err, campground) {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log("New campground");
-//         console.log(campground);
-//     }
-// });
 
 app.get("/", function(req, res) {
     res.render("landing");
@@ -60,7 +49,7 @@ app.get("/campgrounds/new", function(req, res) {
 });
 
 app.get("/campgrounds/:id", function(req, res) {
-    Campground.findById(req.params.id, function(err, foundCampground) {
+    Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground) {
         if (err) {
             console.log(err);
         }
