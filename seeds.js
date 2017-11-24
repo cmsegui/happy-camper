@@ -5,17 +5,17 @@ var Comment = require("./models/comments");
 var data = [{
         name: "Red Rock Campgrounds",
         image: "https://static.pexels.com/photos/558454/pexels-photo-558454.jpeg",
-        description: "Fire pits at each campsite and solar panels in the restrooms. Yay!"
+        description: "Lorem ipsum dolor amet ugh jean shorts pok pok selvage vape wolf. Keffiyeh meggings bicycle rights, iPhone trust fund marfa yuccie venmo intelligentsia. Gastropub leggings bushwick you probably haven't heard of them tofu. Ennui succulents narwhal, poutine chambray activated charcoal lo-fi cloud bread coloring book tousled."
     },
     {
         name: "Sweetwater Creek State Park",
         image: "https://static.pexels.com/photos/6714/light-forest-trees-morning.jpg",
-        description: "Close to town, although you feel super secluded."
+        description: "Lorem ipsum dolor amet ugh jean shorts pok pok selvage vape wolf. Keffiyeh meggings bicycle rights, iPhone trust fund marfa yuccie venmo intelligentsia. Gastropub leggings bushwick you probably haven't heard of them tofu. Ennui succulents narwhal, poutine chambray activated charcoal lo-fi cloud bread coloring book tousled."
     },
     {
         name: "Anastasia State Park",
         image: "https://static.pexels.com/photos/6757/feet-morning-adventure-camping.jpg",
-        description: "Beach camping at its finest!"
+        description: "Lorem ipsum dolor amet ugh jean shorts pok pok selvage vape wolf. Keffiyeh meggings bicycle rights, iPhone trust fund marfa yuccie venmo intelligentsia. Gastropub leggings bushwick you probably haven't heard of them tofu. Ennui succulents narwhal, poutine chambray activated charcoal lo-fi cloud bread coloring book tousled."
     }
 ];
 
