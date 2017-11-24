@@ -3,7 +3,7 @@ var Campground = require("./models/campground");
 var Comment = require("./models/comments");
 
 var data = [{
-        name: "Red Rock",
+        name: "Red Rock Campgrounds",
         image: "https://static.pexels.com/photos/558454/pexels-photo-558454.jpeg",
         description: "Fire pits at each campsite and solar panels in the restrooms. Yay!"
     },
