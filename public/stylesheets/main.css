@@ -1,3 +1,7 @@
-body {
-    background-color: pink;
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
 }
