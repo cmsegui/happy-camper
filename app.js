@@ -60,6 +60,17 @@ app.get("/campgrounds/:id", function(req, res) {
 });
 
 
+
+//====================COMMENT ROUTES================================
+
+app.get("/campgrounds/:id/comments/new", function(req, res) {
+    res.render("new");
+});
+
+
+
+
+
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Server is now running!");
 });
