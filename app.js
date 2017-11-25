@@ -20,7 +20,7 @@ mongoose.connect("mongodb://localhost/happy-camper", { useMongoClient: true });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
-seedDB();
+// seedDB();
 
 //=========PASSPORT CONFIG================
 
