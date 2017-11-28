@@ -98,6 +98,7 @@ function checkCampOwner(req, res, next) {
             }
             else {
                 if (foundCampground.author.id.equals(req.user._id)) {
+                    //used .equals bc it returns mongoose object id and i need to compare to a string
                     next();
                 }
                 else {
