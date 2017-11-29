@@ -6,6 +6,6 @@
     padding: 0;
 }
 
-#delete-btn {
+.delete-btn {
     display: inline;
 }
